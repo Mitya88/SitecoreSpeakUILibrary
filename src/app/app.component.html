@@ -1,0 +1,49 @@
+<sc-page [showNav]="isNavigationShown">
+    <div scPageHeader>
+      <sc-global-header appName="Sitecore Speak 3 UI Library" [(show)]="isNavigationShown">
+        <a href="#" scGlobalLogo></a>
+        <!-- AccountInformation gets accountName and accountImageUrl automatically from Sitecore context which is configured in AppModule -->
+        <sc-account-information (logout)="logoutService.logout()"></sc-account-information>
+      </sc-global-header>
+    </div>
+    <aside scPageNav>
+      <nav>
+        <sc-menu>
+              
+            <sc-menu-category icon="cake_slice" text="Components" [open]="true">
+                    <sc-menu-item>
+                            <a scMenuItemLink routerLink=""  routerLinkActive="active">Home</a>
+                    </sc-menu-item>
+              <sc-menu-item>
+                <a scMenuItemLink routerLink="/buttonpage"  routerLinkActive="active">Buttons</a>
+              </sc-menu-item>
+              <sc-menu-item>
+                <a scMenuItemLink routerLink="/iconpage"  routerLinkActive="active">Icons</a>
+              </sc-menu-item>
+              <sc-menu-item>
+                <a scMenuItemLink routerLink="/progressindicatorpage"  routerLinkActive="active">Progress Indicator</a>
+              </sc-menu-item>
+              <sc-menu-item>
+                <a scMenuItemLink routerLink="/tabpage"  routerLinkActive="active"> Tabs</a>
+              </sc-menu-item>
+              <sc-menu-item>
+                <a scMenuItemLink routerLink="/tablepages"  routerLinkActive="active">Tables</a>
+              </sc-menu-item>
+              <sc-menu-item>
+                    <a scMenuItemLink routerLink="/menupage"  routerLinkActive="active">Menus</a>
+                  </sc-menu-item>
+
+            </sc-menu-category>
+          </sc-menu>
+      </nav>
+    </aside>
+    <div scPageAppHeader>
+      <sc-application-header text="UI Library"></sc-application-header>
+    </div>
+   
+    <article scPageContent class="p-4">
+   
+    
+            <router-outlet></router-outlet>
+        </article>
+  </sc-page>

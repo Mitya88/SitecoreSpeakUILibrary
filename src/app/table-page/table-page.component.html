@@ -1,0 +1,141 @@
+<div>
+     
+    <a href="#"></a>
+    <!-- AccountInformation gets accountName and accountImageUrl automatically from Sitecore context which is configured in AppModule -->
+     
+  </div>
+<aside>
+   
+     
+       
+        <a>Menu item 1</a>
+       
+       
+        <a>Menu item 2</a>
+       
+     
+     
+       
+        <a>Menu item 3</a>
+       
+       
+        <a>Menu item 4</a>
+       
+     
+   
+</aside>
+<div>
+  </div>
+<article>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Status</th>
+<th>Created by</th>
+<th>Created data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lorem</td>
+<td>Active</td>
+<td>sitecore\admin</td>
+<td>Jan 20, 2018</td>
+</tr>
+<tr>
+<td>Ipsum</td>
+<td>Active</td>
+<td>sitecore\admin</td>
+<td>Jan 20, 2018</td>
+</tr>
+<tr>
+<td>Foop</td>
+<td>Inactive</td>
+<td>sitecore\admin</td>
+<td>Jan 22, 2018</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+<table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+      </tr>
+    </tbody>
+  </table>
+
+<div class="card mb-3">
+    <div class="card-block">
+      <h4 class="card-title">Tabs</h4>
+      <table scTable>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+            </tr>
+          </tbody>
+        </table>
+      <table scTable>
+          <thead scSort (sortChange)="onSortChange($event)" sortBehavior="multi">
+            <tr>
+              <th scSortHeader="id">#</th>
+              <th scSortHeader="name">First Name</th>
+              <th scSortHeader="lastname">Last Name</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of sortedData; trackBy: trackByItemId">
+              <td>{{ data.id }}</td>
+              <td>{{ data.name }}</td>
+              <td>{{ data.lastname }}</td>
+              <td>{{ data.username }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      <textarea highlight-js [options]="{}">
+        <sc-tab-group variant="switch">
+          <sc-tab label="Tab 1">
+            <p>Tab 1.</p>
+          </sc-tab>
+          <sc-tab label="Tab 2">
+            <p>Tab 2.</p>
+          </sc-tab>
+            <sc-tab label="Disabled tab" [disabled]="true">
+            <p>Disabled tab.</p>
+          </sc-tab>
+        </sc-tab-group>
+      </textarea>
+    </div>
+  </div>
