@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -30,7 +30,7 @@ import { TabPageComponent } from './tab-page/tab-page.component';
 import { IconPageComponent } from './icon-page/icon-page.component';
 import { MenuPageComponent } from './menu-page/menu-page.component';
 import { ScProgressIndicatorPanelModule} from "@speak/ng-bcl/progress-indicator-panel";
-import { HighlightJsModule } from 'ngx-highlight-js';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,8 +67,8 @@ import { HighlightJsModule } from 'ngx-highlight-js';
     ScPageModule,
     ScMenuModule,
     ScTabsModule,
+    ScTableModule,
     SciAntiCSRFModule,
-    HighlightJsModule ,
     NgScModule.forRoot({
       // The ItemId refers to '/sitecore/client/Applications/ScIntegrationRefApp/UserAccess' AccessFolder item
       authItemId: '1023A91F-E7C0-410C-BE84-472204C71FD7',

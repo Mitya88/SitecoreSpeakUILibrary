@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonPageComponent implements OnInit {
 
+  isActive:boolean;
   constructor() { }
 
   ngOnInit() {
