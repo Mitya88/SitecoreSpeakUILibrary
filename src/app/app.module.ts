@@ -30,6 +30,7 @@ import { TabPageComponent } from './tab-page/tab-page.component';
 import { IconPageComponent } from './icon-page/icon-page.component';
 import { MenuPageComponent } from './menu-page/menu-page.component';
 import { ScProgressIndicatorPanelModule} from "@speak/ng-bcl/progress-indicator-panel";
+import { ColorPageComponent } from './color-page/color-page.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ScProgressIndicatorPanelModule} from "@speak/ng-bcl/progress-indicator-
     ProgressIndicatorComponent,
     TabPageComponent,
     IconPageComponent,
-    MenuPageComponent
+    MenuPageComponent,
+    ColorPageComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { ScProgressIndicatorPanelModule} from "@speak/ng-bcl/progress-indicator-
       { path: 'progressindicatorpage', component: ProgressIndicatorComponent },
       { path: 'tabpage', component: TabPageComponent },
       { path: 'tablepages', component: TablePageComponent },
-      {path : 'menupage', component: MenuPageComponent}
+      {path : 'menupage', component: MenuPageComponent},
+      {path : 'colorpage', component: ColorPageComponent}
     ]),
     ScAccountInformationModule,
     ScActionBarModule,

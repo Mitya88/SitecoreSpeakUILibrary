@@ -7,24 +7,15 @@
         <sc-icon icon="about" title="about" size="xxxlarge">about</sc-icon><br />
       </sc-tab>
       <sc-tab label="Tab 2">
-        <p>Tab 2.</p>
+          <sc-progress-indicator-panel [show]="true">
+              <!-- Content goes here -->
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </sc-progress-indicator-panel>
       </sc-tab>
       <sc-tab label="Disabled tab" [disabled]="true">
         <p>Disabled tab.</p>
       </sc-tab>
     </sc-tab-group>
-    <!-- <textarea highlight-js [options]="{}">
-      <sc-tab-group variant="switch">
-        <sc-tab label="Tab 1">
-          <p>Tab 1.</p>
-        </sc-tab>
-        <sc-tab label="Tab 2">
-          <p>Tab 2.</p>
-        </sc-tab>
-          <sc-tab label="Disabled tab" [disabled]="true">
-          <p>Disabled tab.</p>
-        </sc-tab>
-      </sc-tab-group>
-    </textarea> -->
+   
   </div>
 </div>

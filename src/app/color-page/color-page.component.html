@@ -1,0 +1,11 @@
+<div   class="card mb-3 }">
+    <div class="card-block">
+      <h4 class="card-title">Background colors</h4>
+    </div>
+  </div>
+
+<div  *ngFor="let item of classes" class="card mb-3 {{item}}">
+  <div class="card-block">
+    <h4 class="card-title">{{item}}</h4>
+  </div>
+</div>

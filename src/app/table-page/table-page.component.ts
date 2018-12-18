@@ -14,6 +14,18 @@ export class TablePageComponent implements OnInit {
       name: 'Mark',
       lastname: 'Otto',
       username: '@mdo'
+    },
+    {
+      id: '2',
+      name: 'Mark2',
+      lastname: 'Otto2',
+      username: '@mdo'
+    },
+    {
+      id: '3',
+      name: 'Mark5',
+      lastname: 'Otto1',
+      username: '@mdo'
     }];
 
     trackByItemId(id: string, header): number { return header.id; }
