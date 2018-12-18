@@ -13,13 +13,16 @@ import { ScGlobalHeaderModule } from '@speak/ng-bcl/global-header';
 import { ScGlobalLogoModule } from '@speak/ng-bcl/global-logo';
 import { ScIconModule } from '@speak/ng-bcl/icon';
 import { ScPageModule } from '@speak/ng-bcl/page';
-import { ScTabsModule} from '@speak/ng-bcl/tabs';
-import { ScTableModule} from '@speak/ng-bcl/table';
+import { ScTabsModule } from '@speak/ng-bcl/tabs';
+import { ScDropdownModule } from '@speak/ng-bcl/dropdown';
+import { ScTableModule } from '@speak/ng-bcl/table';
 import { ScMenu, ScMenuModule } from '@speak/ng-bcl/menu';
 import { CONTEXT, DICTIONARY } from '@speak/ng-bcl';
-
+import { ScActionControlModule } from '@speak/ng-bcl/action-control';
 import { NgScModule } from '@speak/ng-sc';
 import { SciAntiCSRFModule } from '@speak/ng-sc/anti-csrf';
+
+import { ScDialogModule } from '@speak/ng-bcl/dialog';
 
 import { AppComponent } from './app.component';
 import { ButtonPageComponent } from './button-page/button-page.component';
@@ -29,11 +32,13 @@ import { ProgressIndicatorComponent } from './progress-indicator/progress-indica
 import { TabPageComponent } from './tab-page/tab-page.component';
 import { IconPageComponent } from './icon-page/icon-page.component';
 import { MenuPageComponent } from './menu-page/menu-page.component';
-import { ScProgressIndicatorPanelModule} from "@speak/ng-bcl/progress-indicator-panel";
+import { ScProgressIndicatorPanelModule } from "@speak/ng-bcl/progress-indicator-panel";
 import { ColorPageComponent } from './color-page/color-page.component';
 import { TextHeadingPageComponent } from './text-heading-page/text-heading-page.component';
 import { ImagePageComponent } from './image-page/image-page.component';
 import { ContainersPageComponent } from './containers-page/containers-page.component';
+import { DialogsPageComponent } from './dialogs-page/dialogs-page.component';
+import { ControlsPageComponent } from './controls-page/controls-page.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +53,9 @@ import { ContainersPageComponent } from './containers-page/containers-page.compo
     ColorPageComponent,
     TextHeadingPageComponent,
     ImagePageComponent,
-    ContainersPageComponent
+    ContainersPageComponent,
+    DialogsPageComponent,
+    ControlsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -62,11 +69,13 @@ import { ContainersPageComponent } from './containers-page/containers-page.compo
       { path: 'progressindicatorpage', component: ProgressIndicatorComponent },
       { path: 'tabpage', component: TabPageComponent },
       { path: 'tablepages', component: TablePageComponent },
-      {path : 'menupage', component: MenuPageComponent},
-      {path : 'colorpage', component: ColorPageComponent},
-      {path : 'textheadingpage', component: TextHeadingPageComponent},
-      {path : 'imagepage', component: ImagePageComponent},
-      {path : 'containerspage', component: ContainersPageComponent}
+      { path: 'menupage', component: MenuPageComponent },
+      { path: 'colorpage', component: ColorPageComponent },
+      { path: 'textheadingpage', component: TextHeadingPageComponent },
+      { path: 'imagepage', component: ImagePageComponent },
+      { path: 'containerspage', component: ContainersPageComponent },
+      { path: 'dialogspage', component: DialogsPageComponent },
+      { path: 'controlspage', component: ControlsPageComponent }
     ]),
     ScAccountInformationModule,
     ScActionBarModule,
@@ -80,18 +89,21 @@ import { ContainersPageComponent } from './containers-page/containers-page.compo
     ScMenuModule,
     ScTabsModule,
     ScTableModule,
+    ScDropdownModule,
+    ScDialogModule,
+    ScActionControlModule,
     SciAntiCSRFModule,
     NgScModule.forRoot({
-    
+
       authItemId: '1023A91F-E7C0-410C-BE84-472204C71FD7',
       contextToken: CONTEXT,
       dictionaryToken: DICTIONARY,
-     
+
       translateItemId: 'B76C8EC2-1139-4BB1-915D-0F0DB4A04FE4'
     })
   ],
   providers: [
-   // ItemService,
+    // ItemService,
   ],
   bootstrap: [AppComponent]
 })
