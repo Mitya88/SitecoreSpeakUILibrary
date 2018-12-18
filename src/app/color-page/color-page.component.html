@@ -1,11 +1,26 @@
-<div   class="card mb-3 }">
-    <div class="card-block">
-      <h4 class="card-title">Background colors</h4>
-    </div>
-  </div>
-
-<div  *ngFor="let item of classes" class="card mb-3 {{item}}">
+<div class="card mb-3 }">
   <div class="card-block">
-    <h4 class="card-title">{{item}}</h4>
+    <h4 class="card-title">Colors</h4>
   </div>
 </div>
+
+
+
+<sc-tab-group variant="switch">
+  <sc-tab label="Background colors">
+<br>
+    <div *ngFor="let item of classes" class="card mb-3 {{item}}">
+      <div class="card-block">
+        <h4 class="card-title">{{item}}</h4>
+      </div>
+    </div>
+  </sc-tab>
+  <sc-tab label="Text Colors">
+      <br>
+    <div *ngFor="let item of textClasses" class="card mb-3 {{item}} {{invertBackgroundColor(item)}}">
+      <div class="card-block">
+        <h4 class="card-title">{{item}}</h4>
+      </div>
+    </div>
+  </sc-tab>
+</sc-tab-group>

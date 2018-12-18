@@ -31,6 +31,9 @@ import { IconPageComponent } from './icon-page/icon-page.component';
 import { MenuPageComponent } from './menu-page/menu-page.component';
 import { ScProgressIndicatorPanelModule} from "@speak/ng-bcl/progress-indicator-panel";
 import { ColorPageComponent } from './color-page/color-page.component';
+import { TextHeadingPageComponent } from './text-heading-page/text-heading-page.component';
+import { ImagePageComponent } from './image-page/image-page.component';
+import { ContainersPageComponent } from './containers-page/containers-page.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { ColorPageComponent } from './color-page/color-page.component';
     TabPageComponent,
     IconPageComponent,
     MenuPageComponent,
-    ColorPageComponent
+    ColorPageComponent,
+    TextHeadingPageComponent,
+    ImagePageComponent,
+    ContainersPageComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +63,10 @@ import { ColorPageComponent } from './color-page/color-page.component';
       { path: 'tabpage', component: TabPageComponent },
       { path: 'tablepages', component: TablePageComponent },
       {path : 'menupage', component: MenuPageComponent},
-      {path : 'colorpage', component: ColorPageComponent}
+      {path : 'colorpage', component: ColorPageComponent},
+      {path : 'textheadingpage', component: TextHeadingPageComponent},
+      {path : 'imagepage', component: ImagePageComponent},
+      {path : 'containerspage', component: ContainersPageComponent}
     ]),
     ScAccountInformationModule,
     ScActionBarModule,
@@ -73,11 +82,11 @@ import { ColorPageComponent } from './color-page/color-page.component';
     ScTableModule,
     SciAntiCSRFModule,
     NgScModule.forRoot({
-      // The ItemId refers to '/sitecore/client/Applications/ScIntegrationRefApp/UserAccess' AccessFolder item
+    
       authItemId: '1023A91F-E7C0-410C-BE84-472204C71FD7',
       contextToken: CONTEXT,
       dictionaryToken: DICTIONARY,
-      // The ItemId refers to '/sitecore/client/Applications/ScIntegrationRefApp/Translations' Speak3DictionaryFolder item
+     
       translateItemId: 'B76C8EC2-1139-4BB1-915D-0F0DB4A04FE4'
     })
   ],
