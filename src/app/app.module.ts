@@ -94,11 +94,9 @@ import { ControlsPageComponent } from './controls-page/controls-page.component';
     ScActionControlModule,
     SciAntiCSRFModule,
     NgScModule.forRoot({
-
       authItemId: '1023A91F-E7C0-410C-BE84-472204C71FD7',
       contextToken: CONTEXT,
       dictionaryToken: DICTIONARY,
-
       translateItemId: 'B76C8EC2-1139-4BB1-915D-0F0DB4A04FE4'
     })
   ],

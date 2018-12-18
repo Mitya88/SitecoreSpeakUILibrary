@@ -1,18 +1,18 @@
 <template #basicUsageDialog>
-    <sc-dialog>
-      <sc-dialog-header>
-        <h4>Demo Dialog Title</h4>
-      </sc-dialog-header>
-      <sc-dialog-body>
-        <h2>Add you components here</h2>
+  <sc-dialog>
+    <sc-dialog-header>
+      <h4>Demo Dialog Title</h4>
+    </sc-dialog-header>
+    <sc-dialog-body>
+      <h2>Add you components here</h2>
       <p>...</p>
-          
-      </sc-dialog-body>
-      <sc-dialog-footer>
-        <button scButton scDialogClose>Close</button>
-        <button scButton="primary" (click)="alertAndClose()">Save</button>
-      </sc-dialog-footer>
-    </sc-dialog>
-  </template>
 
-  <button scButton (click)="dialogService.open(basicUsageDialog)">Open a dialog</button>
+    </sc-dialog-body>
+    <sc-dialog-footer>
+      <button scButton scDialogClose>Close</button>
+      <button scButton="primary" (click)="alertAndClose()">Save</button>
+    </sc-dialog-footer>
+  </sc-dialog>
+</template>
+
+<button scButton (click)="dialogService.open(basicUsageDialog)">Open a dialog</button>
