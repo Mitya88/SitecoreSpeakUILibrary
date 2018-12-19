@@ -15,7 +15,7 @@ import { ScIconModule } from '@speak/ng-bcl/icon';
 import { ScPageModule } from '@speak/ng-bcl/page';
 import { ScTabsModule } from '@speak/ng-bcl/tabs';
 import { ScDropdownModule } from '@speak/ng-bcl/dropdown';
-import { ScTableModule } from '@speak/ng-bcl/table';
+import { ScTableModule } from '@speak/ng-bcl/table'; 
 import { ScMenu, ScMenuModule } from '@speak/ng-bcl/menu';
 import { CONTEXT, DICTIONARY } from '@speak/ng-bcl';
 import { ScActionControlModule } from '@speak/ng-bcl/action-control';
@@ -39,6 +39,7 @@ import { ImagePageComponent } from './image-page/image-page.component';
 import { ContainersPageComponent } from './containers-page/containers-page.component';
 import { DialogsPageComponent } from './dialogs-page/dialogs-page.component';
 import { ControlsPageComponent } from './controls-page/controls-page.component';
+import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { ControlsPageComponent } from './controls-page/controls-page.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    NgxGistModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: StartPageComponent, pathMatch: 'full' },
