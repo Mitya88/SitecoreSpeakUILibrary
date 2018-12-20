@@ -11,10 +11,10 @@ import { SciLogoutService } from '@speak/ng-sc/logout';
 })
 export class AppComponent implements OnInit {
   isNavigationShown : boolean;
-  logoutService: SciLogoutService;
   isActive:boolean;
   constructor(
-    private ngScService: NgScService
+    private ngScService: NgScService,
+    public logoutService: SciLogoutService
   ) { }
 
   ngOnInit() {
