@@ -9,7 +9,14 @@ export class ContainersPageComponent implements OnInit {
 
   constructor() { }
 
+  isEditing = false;
   ngOnInit() {
   }
+  edit() {
+    this.isEditing = true;
+  }
 
+  close() {
+    this.isEditing = false;
+  }
 }

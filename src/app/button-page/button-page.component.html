@@ -1,52 +1,55 @@
-<div class="card mb-3">
-  <div class="card-block">
-    <h4 class="card-title">Using scButton directive</h4>
-    <button scButton="primary">Primary</button>
-    <button scButton="secondary">Secondary</button>
-    <button scButton="info">Info</button>
-    <button scButton="link">Link</button>
-    <button scButton="chromeless">Chromeless</button>
-  </div>
-  <div class="card-block">
-    <button scButton [isFullWidth]="true">Full width</button>
-    <script src="https://gist.github.com/Mitya88/6ce2080c10e8b7a840f871b2847c402d.js"></script>
-  </div>
-</div>
+<sc-page>
+  <app-header scPageHeader></app-header> <!-- shared components/header/header.component.html-->
+  <app-side-menu scPageNav></app-side-menu> <!-- shared components/side-menu/side-menu.component.html-->
 
-<div class="card mb-3">
-  <div class="card-block">
-    <h4 class="card-title">Using scBackButton component</h4>
-    <pre><code highlight="someCode"><sc-back-button>Back</sc-back-button></code></pre>
-    <!-- <textarea highlight-js [options]="{}">
-          <sc-back-button>Back</sc-back-button>
-  </textarea> -->
-  </div>
+  <sc-application-header scPageAppHeader text="UI Library">
+    <h5 class="basic-white">Page title</h5>
+  </sc-application-header>
 
-</div>
+  <div scPageContent>
+    <article class="p-4">
+      <div class="card mb-3">
+        <div class="card-block">
+          <h4 class="card-title">Using scButton directive</h4>
+          <button scButton="primary">Primary</button>
+          <button scButton="secondary">Secondary</button>
+          <button scButton="info">Info</button>
+          <button scButton="link">Link</button>
+          <button scButton="chromeless">Chromeless</button>
+        </div>
+        <div class="card-block">
+          <button scButton [isFullWidth]="true">Full width</button>
+          <script src="https://gist.github.com/Mitya88/6ce2080c10e8b7a840f871b2847c402d.js"></script>
+        </div>
+      </div>
 
-<div class="card mb-3">
-  <div class="card-block">
-    <h4 class="card-title">Using scIconButton directive</h4>
-    <button scIconButton>
-      <sc-icon icon="apple"></sc-icon>
-    </button>
-    <br />
-    <p>Check icons on icons page</p>
-    <!-- <textarea highlight-js [options]="{}">
-              <button scIconButton>
-                  <sc-icon icon="apple"></sc-icon>
-                </button>
-      </textarea> -->
+      <div class="card mb-3">
+        <div class="card-block">
+          <h4 class="card-title">Using scBackButton component</h4>
+          <pre><code highlight="someCode"><sc-back-button>Back</sc-back-button></code></pre>
+        </div>
+
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-block">
+          <h4 class="card-title">Using scIconButton directive</h4>
+          <button scIconButton>
+            <sc-icon icon="apple"></sc-icon>
+          </button>
+          <br />
+          <p>Check icons on icons page</p>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-block">
+          <h4 class="card-title">Using scToggle directive</h4>
+          <button scButton [(scToggle)]="isActive">Enabled</button>
+          <button scButton [(scToggle)]="!isActive">Disabled</button><br /><br />
+
+        </div>
+      </div>
+    </article>
+
   </div>
-</div>
-<div class="card mb-3">
-  <div class="card-block">
-    <h4 class="card-title">Using scToggle directive</h4>
-    <button scButton [(scToggle)]="isActive">Enabled</button>
-    <button scButton [(scToggle)]="!isActive">Disabled</button><br /><br />
-    <!-- <textarea highlight-js [options]="{}">
-            <button  scButton [(scToggle)]="isActive">Enabled</button>
-            <button  scButton [(scToggle)]="!isActive">Disabled</button>
-         </textarea> -->
-  </div>
-</div>
+</sc-page>

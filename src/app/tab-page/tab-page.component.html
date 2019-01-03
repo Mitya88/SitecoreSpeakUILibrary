@@ -1,21 +1,32 @@
-<div class="card mb-3">
-  <div class="card-block">
-    <h4 class="card-title">Tabs</h4>
-    <sc-tab-group variant="switch">
-      <sc-tab label="Tab 1">
+<sc-page>
+  <app-header scPageHeader></app-header> <!-- shared components/header/header.component.html-->
+  <app-side-menu scPageNav></app-side-menu> <!-- shared components/side-menu/side-menu.component.html-->
 
-        <sc-icon icon="about" title="about" size="xxxlarge">about</sc-icon><br />
-      </sc-tab>
-      <sc-tab label="Tab 2">
-          <sc-progress-indicator-panel [show]="true">
-              <!-- Content goes here -->
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </sc-progress-indicator-panel>
-      </sc-tab>
-      <sc-tab label="Disabled tab" [disabled]="true">
-        <p>Disabled tab.</p>
-      </sc-tab>
-    </sc-tab-group>
-   
+  <sc-application-header scPageAppHeader text="UI Library">
+    <h5 class="basic-white">Page title</h5>
+  </sc-application-header>
+
+  <div scPageContent>
+    <article class="p-4">
+      <div class="card mb-3">
+        <div class="card-block">
+          <h4 class="card-title">Tabs</h4>
+          <sc-tab-group variant="switch">
+            <sc-tab label="Tab 1">
+              <sc-icon icon="about" title="about" size="xxxlarge">about</sc-icon><br />
+            </sc-tab>
+            <sc-tab label="Tab 2">
+              <sc-progress-indicator-panel [show]="true">
+                <!-- Content goes here -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </sc-progress-indicator-panel>
+            </sc-tab>
+            <sc-tab label="Disabled tab" [disabled]="true">
+              <p>Disabled tab.</p>
+            </sc-tab>
+          </sc-tab-group>
+        </div>
+      </div>
+    </article>
   </div>
-</div>
+</sc-page>

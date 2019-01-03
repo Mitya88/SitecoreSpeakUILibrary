@@ -1,16 +1,38 @@
-<div class="card mb-3 }">
-  <div class="card-block">
-    <h4 class="card-title">Controls (More content is coming soon)</h4>
-  </div>
-</div>
+<sc-page>
+  <app-header scPageHeader></app-header> <!-- shared components/header/header.component.html-->
+  <app-side-menu scPageNav></app-side-menu> <!-- shared components/side-menu/side-menu.component.html-->
 
-<sc-dropdown>
-  <button scButton scDropdownToggle>Dropdow button</button>
-  <sc-dropdown-menu>
-    <sc-dropdown-header>Dropdown header</sc-dropdown-header>
-    <a scDropdownItem href="#">Action</a>
-    <a scDropdownItem href="#">Another action</a>
-    <sc-dropdown-divider></sc-dropdown-divider>
-    <a scDropdownItem href="#">Something else here</a>
-  </sc-dropdown-menu>
-</sc-dropdown>
+  <sc-application-header scPageAppHeader text="UI Library">
+    <h5 class="basic-white">Page title</h5>
+  </sc-application-header>
+
+  <div scPageContent>
+    <article class="p-4">
+      <div class="card mb-3 }">
+        <div class="card-block">
+          <h4 class="card-title">Controls (More content is coming soon)</h4>
+        </div>
+      </div>
+
+      <sc-dropdown>
+        <button scButton scDropdownToggle>Dropdow button</button>
+
+       
+
+        <sc-dropdown-menu>
+          <sc-dropdown-header>Dropdown header</sc-dropdown-header>
+          <a scDropdownItem href="#">Action</a>
+          <a scDropdownItem href="#">Another action</a>
+          <sc-dropdown-divider></sc-dropdown-divider>
+          <a scDropdownItem href="#">Something else here</a>
+        </sc-dropdown-menu>
+      </sc-dropdown>
+      <br><h2>Form elements</h2>
+      <div class="form-group">
+          <label>Text</label>
+          <input type="text" class="form-control" placeholder="input"><br>
+      </div>
+    </article>
+
+  </div>
+</sc-page>

@@ -1,65 +1,49 @@
-<p>Simple drop down menu with active states, open/closed states</p>
-<nav scPageNav>
- <sc-menu>
-    <sc-menu-category icon="cake_slice" text="Lorem ipsum dolor" [open]="true">
-      <sc-menu-item>
-        <a scMenuItemLink routerLink="lorem">Not active</a>
-      </sc-menu-item>
-      <sc-menu-item>
-        <a scMenuItemLink routerLink="ipsum" [active]="true">Active</a>
-      </sc-menu-item>
-    </sc-menu-category>
-    <sc-menu-category icon="cake_slice" text="Other Category with buttons" [open]="true">
-        <sc-menu-item>
-            <div class="p-1"><button scButton>Button</button></div>
-          
-        </sc-menu-item>
-        <sc-menu-item>
-            <div class="p-1"><button scButton="primary">Button</button></div>
-          
-        </sc-menu-item>
-        <sc-menu-item>
-          <a scMenuItemLink routerLink="ipsum" [active]="true">Active</a>
-        </sc-menu-item>
-      </sc-menu-category>
-      <sc-menu-category icon="cake_slice" text="Closed by Default" [open]="false">
-          <sc-menu-item>
-            <a scMenuItemLink routerLink="lorem">Not active</a>
-          </sc-menu-item>
-          <sc-menu-item>
-            <a scMenuItemLink routerLink="ipsum" [active]="true">Active</a>
-          </sc-menu-item>
-        </sc-menu-category>
-  </sc-menu>
-</nav>
+<sc-page>
+  <app-header scPageHeader></app-header> <!-- shared components/header/header.component.html-->
+  <app-side-menu scPageNav></app-side-menu> <!-- shared components/side-menu/side-menu.component.html-->
 
-  <!-- <div class="card mb-3">
-      <div class="card-block">
-        <h4 class="card-title">Simple Menu</h4>
-        <p class="card-text">When logged in, fetching the item, will display the item details. Open another tab and log out, then press the fetch
-          button again in this tab. You will notice how the page will refresh and redirect to the Sitecore login page. This
-          is is the <code>SciAuthHttp</code> module kicking in.</p>
-        <p class="card-text">The fetch button will be disabled during the process of the request.</p>
-       
-      </div>
-    </div>
+  <sc-application-header scPageAppHeader text="UI Library">
+    <h5 class="basic-white">Page title</h5>
+  </sc-application-header>
 
-    <!-- User access (SciAuthModule) 
-    <div class="card mb-3">
-      <div class="card-block">
-        <h4 class="card-title">Applying Sitecore security rights on UI components</h4>
-        <p class="card-text">In Sitecore, the Security Editor can be used to restrict access permissions to users or roles. The <code>SciAuthModule</code>          can read these access settings so that they can be used in Angular.</p>
-        <p class="card-text">Some information (text) in this section, has been hidden to users in the Developer role, as they don't have read
-          access to it. There are also two form fields where the Developer users don't have write permission, which means
-          the two fields are disabled. Try logining in with a developer user and an admin user and compare the two pages.</p>
-        <p class="card-text grass-xx-dark" *ngIf="authService.hasRead('SomeInfoHiddenToDevs') | async"><em>Trust me, I am not a developer.</em></p><br>
-        <p class="card-text">The form below contains two fields that are disabled for developer users, as they don't have write permissions.</p>
-        <div class="p-3 bg-banana-xxx-light">
-          <div class="form-group">
-            <label for="exampleInputPassword1">{{ 'DISABLEABLE_TEXT_FIELD' | translate }}</label>
-            <input type="text" class="form-control" [placeholder]="'THIS_FIELD_IS_DISABLED_TO_DEV_USERS' | translate" [disabled]="!(authService.hasWrite('SomeFieldDisabledToDevs') | async)"><br>
-          </div>
-          <button scButton [disabled]="!(authService.hasWrite('OtherFieldDisabledToDevs') | async)">{{ 'DISABLEABLE_BUTTON' | translate }}</button>
-        </div>
-      </div>
-    </div> -->
+  <div scPageContent>
+    <article class="p-4">
+      <p>Simple drop down menu with active states, open/closed states</p>
+      <nav scPageNav>
+        <sc-menu>
+          <sc-menu-category icon="cake_slice" text="Lorem ipsum dolor" [open]="true">
+            <sc-menu-item>
+              <a scMenuItemLink routerLink="lorem">Not active</a>
+            </sc-menu-item>
+            <sc-menu-item>
+              <a scMenuItemLink routerLink="ipsum" [active]="true">Active</a>
+            </sc-menu-item>
+          </sc-menu-category>
+          <sc-menu-category icon="cake_slice" text="Other Category with buttons" [open]="true">
+            <sc-menu-item>
+              <div class="p-1"><button scButton>Button</button></div>
+
+            </sc-menu-item>
+            <sc-menu-item>
+              <div class="p-1"><button scButton="primary">Button</button></div>
+
+            </sc-menu-item>
+            <sc-menu-item>
+              <a scMenuItemLink routerLink="ipsum" [active]="true">Active</a>
+            </sc-menu-item>
+          </sc-menu-category>
+          <sc-menu-category icon="cake_slice" text="Closed by Default" [open]="false">
+            <sc-menu-item>
+              <a scMenuItemLink routerLink="lorem">Not active</a>
+            </sc-menu-item>
+            <sc-menu-item>
+              <a scMenuItemLink routerLink="ipsum" [active]="true">Active</a>
+            </sc-menu-item>
+          </sc-menu-category>
+        </sc-menu>
+      </nav>
+
+    </article>
+    
+  </div>
+</sc-page>

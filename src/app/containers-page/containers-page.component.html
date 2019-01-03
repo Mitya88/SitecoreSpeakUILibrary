@@ -1,3 +1,33 @@
-<p>
-  coming soon!
-</p>
+<sc-page>
+  <app-header scPageHeader></app-header> <!-- shared components/header/header.component.html-->
+
+
+  <sc-application-header scPageAppHeader text="UI Library">
+    <h5 class="basic-white">Page title</h5>
+  </sc-application-header>
+
+    <div scPageActionBar>
+      <sc-action-bar>
+        <sc-action-bar-left>
+          <sc-back-button></sc-back-button>
+        </sc-action-bar-left>
+        <sc-action-bar-right>
+          <button type="button" scIconButton [(scToggle)]="isEditing">
+            <sc-icon size="small" icon="context_toggle"></sc-icon>
+          </button>
+        </sc-action-bar-right>
+      </sc-action-bar>
+    </div>
+
+    <article scPageContent class="p-3"><div class="card mb-3 }">
+        <div class="card-block">
+          <h4 class="card-title">Action bar & Aside Panel</h4>
+        </div>
+      </div>
+    </article>
+    <aside scPageContext [show]="isEditing" class="bg-basic-white">
+      <div class="p-3">
+        <h4>Panel by toggle</h4>
+      </div>
+    </aside>
+</sc-page>

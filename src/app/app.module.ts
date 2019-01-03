@@ -40,6 +40,8 @@ import { ContainersPageComponent } from './containers-page/containers-page.compo
 import { DialogsPageComponent } from './dialogs-page/dialogs-page.component';
 import { ControlsPageComponent } from './controls-page/controls-page.component';
 import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
+import { SideMenuComponent } from './shared-components/side-menu/side-menu.component';
+import { HeaderComponent } from './shared-components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
     ImagePageComponent,
     ContainersPageComponent,
     DialogsPageComponent,
-    ControlsPageComponent
+    ControlsPageComponent,
+    SideMenuComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

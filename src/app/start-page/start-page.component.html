@@ -1,16 +1,30 @@
-<div class="card mb-3">
-  <div class="card-block">
-    <h1 class="card-title">Sitecore Speak 3 UI Library</h1>
-    <p>This is a demo application of Sitecore Speak 3 UI components and styles</p>
-    <p>Feel free to add more styles and components. Custom components are also welcomed</p>
-  </div>
-</div>
+<sc-page>
+  <app-header scPageHeader></app-header> <!-- shared components/header/header.component.html-->
+  <app-side-menu scPageNav></app-side-menu> <!-- shared components/side-menu/side-menu.component.html-->
+
+  <sc-application-header scPageAppHeader text="UI Library">
+    <h5 class="basic-white">Page title</h5>
+  </sc-application-header>
+
+  <div scPageContent>
+    <article scPageContent class="p-4">
+      <div class="card mb-3">
+        <div class="card-block">
+          <h1 class="card-title">Sitecore Speak 3 UI Library</h1>
+          <p>This is a demo application of Sitecore Speak 3 UI components and styles</p>
+          <p>Feel free to add more styles and components. Custom components are also welcomed</p>
+        </div>
+      </div>
 
 
-<div class="card mb-3">
-  <div class="card-block">
-    <h1 class="card-title">How to use libraries</h1>
-    <p>Import the modules in your <strong>app.module.ts</strong> file</p>
-    <ngx-gist [gistId]="'Mitya88/d5702b4a5d299b0035dbe35086ed5956'" style="display:block;height: 800px;"></ngx-gist>
+      <div class="card mb-3">
+        <div class="card-block">
+          <h1 class="card-title">How to use libraries</h1>
+          <p>Import the modules in your <strong>app.module.ts</strong> file</p>
+          <!-- <ngx-gist [gistId]="'Mitya88/d5702b4a5d299b0035dbe35086ed5956'" style="display:block;height: 800px;"></ngx-gist> -->
+        </div>
+      </div>
+    </article>
+
   </div>
-</div>
+</sc-page>

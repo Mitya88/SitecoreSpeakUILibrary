@@ -1,0 +1,6 @@
+
+  <sc-global-header appName="Sitecore Speak 3 UI Library" [pageTitle]="'This is the page title'"  [(show)]="isNavigationShown">
+    <a href="#" scGlobalLogo></a>
+    <!-- AccountInformation gets accountName and accountImageUrl automatically from Sitecore context which is configured in AppModule -->
+    <sc-account-information (logout)="logoutService.logout()"></sc-account-information>
+  </sc-global-header> 

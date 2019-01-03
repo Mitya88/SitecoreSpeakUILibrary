@@ -1,3 +1,34 @@
-<p>
-  Coming soon!
-</p>
+<sc-page>
+  <app-header scPageHeader></app-header> <!-- shared components/header/header.component.html-->
+  <app-side-menu scPageNav></app-side-menu> <!-- shared components/side-menu/side-menu.component.html-->
+
+  <sc-application-header scPageAppHeader text="UI Library">
+    <h5 class="basic-white">Page title</h5>
+  </sc-application-header>
+
+  <div scPageContent>
+      <article class="p-4">
+          <div class="card mb-3">
+              <div class="card-block">
+                  <h4 class="card-title">Simple image</h4>
+                  <img src="https://via.placeholder.com/600x200"/>
+              </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-block">
+                    <h4 class="card-title">Thumbnail image</h4>
+                    <img class="img-thumbnail" src="https://via.placeholder.com/100x100"/>
+                </div>
+              </div>
+              
+              <h4 class="card-title">Account image</h4>
+              <div class="account-info">
+                  <div class="account-image">
+                      <img class="account-image" src="https://via.placeholder.com/200x200"/>
+                      
+                  </div>
+                </div>
+      </article>
+  </div>
+
+</sc-page>

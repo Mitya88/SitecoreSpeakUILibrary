@@ -1,48 +1,58 @@
+<sc-page>
+  <app-header scPageHeader></app-header> <!-- shared components/header/header.component.html-->
+  <app-side-menu scPageNav></app-side-menu> <!-- shared components/side-menu/side-menu.component.html-->
 
-<div class="card mb-3">
-  <div class="card-block">
-    <h4 class="card-title">Tables</h4>
-    <table scTable>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-        </tr>
-      </tbody>
-    </table>
-    <h4 class="card-title">Sortable table</h4>
-    <table scTable>
-      <thead scSort (sortChange)="onSortChange($event)" sortBehavior="multi">
-        <tr>
-          <th scSortHeader="id">#</th>
-          <th scSortHeader="name">First Name</th>
-          <th scSortHeader="lastname">Last Name</th>
-          <th>Username</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let data of sortedData; trackBy: trackByItemId">
-          <td>{{ data.id }}</td>
-          <td>{{ data.name }}</td>
-          <td>{{ data.lastname }}</td>
-          <td>{{ data.username }}</td>
-        </tr>
-      </tbody>
-    </table>
+  <sc-application-header scPageAppHeader text="UI Library">
+    <h5 class="basic-white">Page title</h5>
+  </sc-application-header>
 
-  
+  <div scPageContent>
+    <article class="p-4">
+      <div class="card mb-3">
+        <div class="card-block">
+          <h4 class="card-title">Tables</h4>
+          <table scTable>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4 class="card-title">Sortable table</h4>
+          <table scTable>
+            <thead scSort (sortChange)="onSortChange($event)" sortBehavior="multi">
+              <tr>
+                <th scSortHeader="id">#</th>
+                <th scSortHeader="name">First Name</th>
+                <th scSortHeader="lastname">Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of sortedData; trackBy: trackByItemId">
+                <td>{{ data.id }}</td>
+                <td>{{ data.name }}</td>
+                <td>{{ data.lastname }}</td>
+                <td>{{ data.username }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
   </div>
-</div>
+</sc-page>
